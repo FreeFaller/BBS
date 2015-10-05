@@ -9,29 +9,37 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>辣鸡小论坛</title>
+    <title>请先登录</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/static/css/navbar-fixed-top.css" rel="stylesheet">
-    <link rel="stylesheet"  href="/static/css/customize.css">
+    <link href="/static/css/signin.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <!--<script src="../../assets/js/ie-emulation-modes-warning.js"></script>-->
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    
   </head>
 
   <body>
 
-    <!-- Fixed navbar -->
+    <div class="container">
+
+      <form class="form-signin" action='/acc_login/' method='POST'>
+        <h2 class="form-signin-heading">登陆</h2>
+        <label for="inputEmail" class="sr-only">邮箱地址</label>
+        <input type="username" id="inputUsername" class="form-control" placeholder="输入邮箱地址" required autofocus>
+        <label for="inputPassword" class="sr-only">密码</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="输入密码" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> 记住我
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+      </form>
+    </div> <!-- /container -->
+
+
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -45,7 +53,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">全部</a></li>
+            <li class="active"><a href="#">全部</a></li>
             <li><a href="#about">装逼技术讨论区</a></li>
             <li><a href="#contact">长者的人生经验</a></li>
             <li><a href="#contact">报道出了偏差的大新闻</a></li>
@@ -84,15 +92,7 @@
        {%endfor%}
       </div>
       {% endblock %}
-    </div> <!-- /container -->
+    </div> 
 
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/static/js/jquery.min.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
   </body>
 </html>

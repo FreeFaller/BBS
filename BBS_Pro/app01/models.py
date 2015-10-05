@@ -1,3 +1,6 @@
+#import sys
+#reload(sys)
+#sys.setdefaultncoding("utf-8")
 from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
@@ -29,4 +32,4 @@ class BBS_user(models.Model):
     # email = models.EmailField()
 
     def __unicode__(self):
-        return self.user
+        return self.user.username

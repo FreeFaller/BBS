@@ -13,7 +13,6 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="/static/css/signin.css" rel="stylesheet">
 
@@ -27,72 +26,18 @@
       <form class="form-signin" action='/acc_login/' method='POST'>
         <h2 class="form-signin-heading">登陆</h2>
         <label for="inputEmail" class="sr-only">邮箱地址</label>
-        <input type="username" id="inputUsername" class="form-control" placeholder="输入邮箱地址" required autofocus>
+        <input type="text" id="inputUsername" name="username" class="form-control" placeholder="输入用户名" required autofocus>
         <label for="inputPassword" class="sr-only">密码</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="输入密码" required>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="输入密码" required>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> 记住我
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登陆</button>
+        <span style='color:red'>{{login_err}}</span>
       </form>
     </div> <!-- /container -->
-
-
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">辣鸡小论坛</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">全部</a></li>
-            <li><a href="#about">装逼技术讨论区</a></li>
-            <li><a href="#contact">长者的人生经验</a></li>
-            <li><a href="#contact">报道出了偏差的大新闻</a></li>
-            <li><a href="#yoo">哲♂学健身房</a></li>
-            <li><a href="#about">新日暮里</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">展开<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-    <div class="container center-container-hx ">
-      {% block page-content %}
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="contents">
-       {% for bbs in bbs_list %}
-       <a href="/detail/{{bbs.id}}/">
-        {{bbs.title}}
-       </a>
-        <br>
-        {{bbs.summary}}
-        <hr>
-       {%endfor%}
-      </div>
-      {% endblock %}
-    </div> 
 
   </body>
 </html>

@@ -46,23 +46,47 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="/">全部</a></li>
-            <li><a href="#about">装逼技术讨论区</a></li>
-            <li><a href="#contact">长者的人生经验</a></li>
-            <li><a href="#contact">报道出了偏差的大新闻</a></li>
-            <li><a href="#yoo">哲♂学健身房</a></li>
-            <li><a href="#about">新日暮里</a></li>
+            {% for category in bbs_category %}
+              <li class="active"><a href ="/category/{{category.id}}">{{category.name}}</a></li>
+            {% endfor %}
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">展开<span class="caret"></span></a>
+              <a href="/login/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              {% if user.is_authenticated %}
+                {{user.username}}
+              {% else %}
+              <span class="glyphicon glyphicon-user">  </span>
+                请先登录
+              {%endif%}
+              <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+                <li><a href="/login/">
+                  {% if user.is_authenticated %}
+                  <span class="glyphicon glyphicon-repeat">  </span>
+                  登录其他用户
+                  {% else %}
+                  <span class="glyphicon glyphicon-user">  </span>
+                  登录
+                  {%endif%}
+                </a></li>
+                {% if user.is_authenticated %}
+                <li><a href="#">
+                  <span class="glyphicon glyphicon-cog">  </span>
+                  设置
+                </li>
+                {%endif%}
+                {% if user.is_authenticated %}
+                <li><a href='#'>
+                  <span class="glyphicon glyphicon-envelope">  </span>
+                  信息
+                </li>
+                {%endif%}
+                {% if user.is_authenticated %}
+                <li><a href="/logout/">
+                  <span class="glyphicon glyphicon-off">  </span>
+                  退出登录</a></li>
+                {%endif%}
               </ul>
             </li>
           </ul>

@@ -4,9 +4,8 @@
 {% block page-content %}
 <div class="contents">
 	<h3>{{bbs_obj.title}}</h3>
-
 	<br>
-	{{bbs_obj.content}}
+	{{bbs_obj.content|safe}}
 </div>
 
 <hr>
@@ -19,16 +18,23 @@
 	</div>
 	<br>
 
-    <form action="/sub_comment/" method="POST">
-    
+
+	{% if user.is_authenticated %}
+    <form action="/sub_comment/" method="POST">    
     <textarea cols = 80 rows = 5 name='comment_content'></textarea>
     <input type="hidden" name="bbs_id" value="{{bbs_obj.id}}" />
     <br />
     <input type="submit" value="回复" id="id_submit" />
     </form>
+
+    {% else %}
+    	<p>
+    	<span class="glyphicon glyphicon-user">	</span>
+    	请先<a href="/login/">登录</a>再发帖：）</p>
+    {%endif%}
 <hr>
 	{% get_comment_list for bbs_obj as comment_list %}
-	 {% for comment in comment_list reversed %}
+	 {% for comment in comment_list  %}
 	 	{{  comment.submit_date }}
 	 	<br>
 	 	{{ comment.comment}}

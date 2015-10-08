@@ -19,12 +19,15 @@ def index(request):
 
 
 def bbs_detail(request,bbs_id):
+
         bbs = models.BBS.objects.get(id=bbs_id)
         bbs_categories = models.Category.objects.all()
+        cata_id = bbs.category.id
         return render_to_response('bbs_detail.html',{
                                                      'bbs_obj':bbs,
                                                      'user':request.user,
                                                      'bbs_category':bbs_categories,
+                                                     'cata_id':int(cata_id)
                                                      })
 
 
@@ -108,4 +111,5 @@ def category(request,cata_id):
                                             'bbs_list':bbs_list,
                                             'user':request.user,
                                             'bbs_category':bbs_categories,
+                                            'cata_id':int(cata_id),
                                             })

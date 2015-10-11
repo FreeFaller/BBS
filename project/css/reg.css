@@ -1,0 +1,68 @@
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	width:100%;
+	height:auto;
+	background-color:#9bf2dd;
+}
+.content{
+	width:500px;
+	height:450px;
+	margin-left:30%;
+	margin-top:10%;
+	background-image:url(../img/blueBG.jpg);
+	background-repeat:no-repeat;
+}
+.img{
+	float:left;
+	width:80px;
+	height:auto;
+	margin-left:90px;
+	margin-top:10px;
+}
+.font1{
+	float:left;
+	font:sans-serif;
+	font-size:36px;
+	font-weight:bold;
+	color:#FFFFFF;
+	margin-top:30px;
+	margin-left:20px;
+}
+.input_1 {
+	display: inline;
+	margin: 4px 5px 0px 8px;
+	width:220px;
+	height:25px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #9c9c9c;
+	background: #fff;
+	-moz-box-shadow: inset 1px 1px 1px #dedede;
+	-webkit-box-shadow: inset 1px 1px 1px #dedede;
+	box-shadow: inset 1px 1px 1px #dedede;
+	border-radius:5px;
+	}
+.font2{
+	font:sans-serif;
+	color:#FFFFFF;
+	font-size:18px;
+	margin-left:90px;
+}
+.button{
+	width:60px;
+	height:28px;
+	margin-left:123px;
+	margin-top:12px;
+	background:url(../img/button.png);
+	background-repeat:no-repeat;
+	background-size:100% auto;
+	border:0px;
+	color:#FFFFFF;
+	font-size:16px;
+	font-weight:bold;
+}
+	

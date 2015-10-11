@@ -1,0 +1,133 @@
+/* CSS Document */
+*{
+	padding:0px;
+	margin:0px;
+	}
+body{background-color:#9bf2dd;}
+#header{position:relative;}
+td img{
+	margin-left:60px;
+	float:left;
+	margin-right:10px;
+}
+td p{
+	margin-top:15px;
+	font-size:46px;
+	font-family:David;
+	font-weight:bold;
+	margin-right:150px;
+}
+td h2{color:#fd9233;}
+form{float:left;margin-right:-60px;}
+a{
+	text-decoration:none;
+	font-size:18px;
+}
+a_right{
+	margin-right:100px;
+	margin-left:20px;
+	}
+#content{
+	width:80%;
+	height:auto;
+	margin-left:10%;
+}
+	.bar{
+	margin-top:10px;
+	background-image:url(../img/bar.png);
+	background-size:100% auto;
+	background-repeat:no-repeat;
+	height:100px;
+	padding:10px;
+	}
+	span{
+		padding:25px 0px;
+		font-size:36px;
+		font-style:inherit;
+		font-weight:bold;
+		color:#FFFFFF;
+	}
+		
+	#search-input {
+		display: inline;
+		float: left;
+		margin: 0 5px 0 8px;
+		width:260px;
+		height: 39px;
+		border-width: 1px;
+		border-style: solid;
+		border-color: #9c9c9c;
+		background: #fff;
+		-moz-box-shadow: inset 1px 1px 1px #dedede;
+		-webkit-box-shadow: inset 1px 1px 1px #dedede;
+		box-shadow: inset 1px 1px 1px #dedede;
+	}
+	#search-input input {
+		margin-top: 9px;
+		padding: 0 6px;
+		width:260px;
+		height: 22px;
+		line-height: 22px;
+		font-size: 16px;
+		font-family: arial;
+		border: 0;
+		background: none;
+		outline: 0;
+		-webkit-appearance: none;
+	}
+	
+	#search-btn {
+		overflow: hidden;
+		float: left;
+		width: 70px;
+		height: 41px;
+		text-align: center;
+		font-size: 16px;
+		background-color:#00CCFF;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		cursor: pointer;
+		border-radius:5px;
+	}
+	.title{
+		text-align:center;
+		margin-top:-25px;
+	}
+	.span_color{
+		background-color:#fad237;
+		color:#000000;
+		padding: 15px 5px 10px 10px;
+		font-family:David;
+		font-weight:bold;
+		font-size:30px;
+	}
+	.imformation{
+		color:#8a8f92;
+		font-size:20px;
+		text-align:center;
+		margin-top:20px;
+	}
+	.main{
+		background-color:#FFFFFF;
+		height:auto;
+		font-size:22px;
+		font-family: Arial, Helvetica, sans-serif;
+		padding: 10px 10px 10px 10px;
+		margin-top:5px;
+	}
+	.response{
+		background-color:#FFFFFF;
+		height:auto;
+		margin-top:5px;
+		font-size:22px;
+		font-family: Arial, Helvetica, sans-serif;
+		padding: 10px 10px 10px 10px;
+	}
+#footer{
+	margin-top:50px;
+	margin-bottom:50px;
+	clear:both;
+	text-align:center;
+	font-size:14px;
+	color:#999999;
+}

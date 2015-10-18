@@ -5,39 +5,42 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>注册</title>
 <link href="css/reg.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 </head>
 <body>
 <div class="content">
 	<div class="img"><img src="img/logo.png" width="100%"></div>
 	<div class="font1">论 坛 注 册</div>
 	<br/><br/><br/><br/><br/>
-	<tr>
-		<td><span class="font2">账 &nbsp;&nbsp; 号</span></td>
-		<td><input class="input_1" type="text"/></td>
-	</tr>
-	<br/>
-	<tr>
-		<td><span class="font2">昵 &nbsp;&nbsp; 称</span></td>
-		<td><input class="input_1" type="text"/></td>
-	</tr>
-	<br/>
-	<tr>
-		<td><span class="font2">密 &nbsp;&nbsp; 码</span></td>
-		<td><input class="input_1" type="text"/></td>
-	</tr>
-	<br/>
-	<tr>
-		<td><span class="font2">密码确认</span></td>
-		<td><input class="input_1" type="text"/></td>
-	</tr>
-	<br/>
-	<tr>
-		<td><span class="font2">邮 &nbsp;&nbsp; 箱</span></td>
-		<td><input class="input_1" type="text"/></td>
-	</tr>
-	<br/>
-	<input type="button" class="button" value="重置"/>
-	<input type="button" class="button" value="确认"/>
+	<form method="post">	
+		<tr>
+			<td><span class="font2">账 &nbsp;&nbsp; 号</span></td>
+			<td><input class="input_1 required" required type="text"/></td>
+		</tr>
+		<br/>
+		<tr>
+			<td><span class="font2"><lable for="nickName">昵 &nbsp;&nbsp; 称</lable></span></td>
+			<td><input class="input_1 required" required type="text" id="nickName"/></td>
+		<br/>
+		</tr>
+		<tr>
+			<td><span class="font2">密 &nbsp;&nbsp; 码</span></td>
+			<td><input class="input_1 required" required type="text"/></td>
+		</tr>
+		<br/>
+		<tr>
+			<td><span class="font2">密码确认</span></td>
+			<td><input class="input_1 required" type="text"/></td>
+		</tr>
+		<br/>
+		<tr>
+			<td><span class="font2"><lable for="email">邮 &nbsp;&nbsp; 箱</lable></span></td>
+			<td><input class="input_1 required" type="text" id="email"/></td>
+		</tr>
+		<br/>
+	<input type="button" class="button" id="res" value="重置"/>
+	<input type="button" class="button" id="send" value="确认"/>
 </div>
 </body>
+<script type="text/javascript" src="js/validation.js"></script>
 </html>
